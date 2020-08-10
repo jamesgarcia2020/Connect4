@@ -1,4 +1,30 @@
-#game-table {
-    display: table;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+header {
+    font-size: 3rem;
+}
+header, h1 {
+    text-align: center;
+}
+
+#game-table {
+    background: yellow;
+    position: absolute;
+    left: 750px;
+    border-left: 10px solid blue;
+    border-right: 10px solid blue;
+    border-top: 5px dotted yellow;
+    border-bottom: 5px solid blue;
+}
+
+td {
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 73px;
+    width: 60px;
 }
