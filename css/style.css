@@ -16,11 +16,16 @@ header, h1 {
     flex-wrap: wrap;
     width: 50%;
     margin: auto;
+    background: yellow;
+    border-left: 15px solid blue;
+    border-right: 15px solid blue;
+    border-bottom: 3px solid blue;
 }
 
 #container > div {
     width: 14%;
     border: 1px solid black;
+    margin: auto;
 
 }
 #container > div > div {
