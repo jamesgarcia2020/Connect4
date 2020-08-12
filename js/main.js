@@ -67,12 +67,30 @@ function handleClick(evt) {
         playerChoice += 7 
     };
     board[playerChoice] = player;
+    console.log(horizontalCheck())
+
     console.log(playerChoice)
     player *= -1;
     // changeColor();
 
     render()
 
+}
+
+// function verticalCheck() {
+//     for(let col = 0; col < 7; col++){
+//         for(let row = 0; row < 3; row++){
+//             if(Math.abs(board[col][row] + board[col][row+1] + 
+//                 board[col][row+2] + board[col][row+3]) === 4)
+//                 return true
+//         }
+//     } return false
+// }
+
+function horizontalCheck() {
+     return board.some(function(element, idx){
+        return Math.abs(board[idx] + board[idx +1] + board[idx +2] + board[idx + 3]) === 4 && idx % 7 < 4
+    })
 }
 
 // Array.prototype.forEach.call(id, (cell) =>{
