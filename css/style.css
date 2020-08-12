@@ -9,6 +9,7 @@ header {
     position: absolute;
     animation-name: moveMe;
     animation-duration: 2s;
+    color: red;
 }
 
 @keyframes moveMe {
