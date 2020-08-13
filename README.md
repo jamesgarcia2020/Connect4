@@ -20,6 +20,6 @@ The technologies used are HTML, CSS, Javascript.
 4. have a musical loop running during game play and a special song for a winning move.
 
 ## Link to the game
-[Connect 4](https://google.com)
+[Connect 4](https://jamesgarcia2020.github.io/Connect4/)
 
 
