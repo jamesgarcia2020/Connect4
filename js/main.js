@@ -12,14 +12,13 @@ for (let i = 0; i < 42; i++) {
 
 
 let reset = document.getElementById('reset');
+const msg = document.getElementById('msg');
 
 
 
 
-//This will help with finding a winner in the game
-const GRID_WIDTH = 7;
-const GRID_HEIGHT = 6;
-const MATCHES_TO_WIN = 4;
+
+
 
 //This is showing each players chip color
 const LOOK_UP = {
@@ -68,57 +67,63 @@ function handleClick(evt) {
     };
     board[playerChoice] = player;
     console.log(horizontalCheck())
+    console.log(verticalCheck())
+    console.log(diagonalrl())
+    console.log(diagonallr())
 
     console.log(playerChoice)
-    player *= -1;
-    // changeColor();
-
     render()
+    player *= -1;
+
+   
 
 }
-
-// function verticalCheck() {
-//     for(let col = 0; col < 7; col++){
-//         for(let row = 0; row < 3; row++){
-//             if(Math.abs(board[col][row] + board[col][row+1] + 
-//                 board[col][row+2] + board[col][row+3]) === 4)
-//                 return true
-//         }
-//     } return false
-// }
-
-function horizontalCheck() {
-     return board.some(function(element, idx){
-        return Math.abs(board[idx] + board[idx +1] + board[idx +2] + board[idx + 3]) === 4 && idx % 7 < 4
+function diagonalrl() {
+    return board.some(function(element, idx){
+        return idx % 6 > 2 && idx < 18 && Math.abs(board[idx] + board[idx + 6] + board[idx + 12] + 
+            board[idx + 18]) === 4
     })
 }
 
-// Array.prototype.forEach.call(id, (cell) =>{
-//     cell.addEventListener('click', changeColor);
-//     cell.style.backgroundColor = 'white';
-// })
-// function changeColor(e) {
-//     let column = e.target.circle.id;
-//     let row = [];
-//     for ( let i =5; i >-1; i++){
-//         if(circle[i].children[column].style.backgroundColor == 'white'){
-//             row.push(circle[i].children[column]);
-//             if(player === 1) {
-//                 row[0].style.backgroundColor = 'red'
-//             }
-//         }
+function diagonallr() {
+    return board.some(function(element, idx){
+        return idx % 7 < 4 && Math.abs(board[idx] + board[idx + 8] + board[idx + 16] + 
+            board[idx + 24]) === 4
+    })
+}
 
-//     }
-//     render();
-// }
+
+function verticalCheck() {
+    return board.some(function(element, idx){
+        return idx +21 < board.length && Math.abs(board[idx] + board[idx + 7] + board[idx + 14] + 
+            board[idx + 21]) === 4 
+    })
+}
+
+function horizontalCheck() {
+     return board.some(function(element, idx){
+        return idx % 7 < 4 && Math.abs(board[idx] + board[idx + 1] + board[idx + 2] 
+            + board[idx + 3]) === 4
+    })
+}
+
+
 // based on the mouse click this function adds the current players choice to the board.
 function render() {
 board.forEach((element, id) => {
     document.getElementById(id).style.backgroundColor = LOOK_UP[element];
+   if (horizontalCheck() + verticalCheck() + diagonallr() + diagonalrl()){
+    
+       msg.innerText =`Player ${player > 0 ? '1': '2'} Wins!`
+       
+       
+   }
    
 });
 
 }
+
+
 
 
 initialize()
