@@ -1,6 +1,6 @@
 # Connect4
 
-game: <img src"https://i.imgur.com/4GxpHYt.png"/>
+<img src="https://i.imgur.com/4GxpHYt.png"/>
 
 Inline-style: 
 ![alt text]("https://imgur.com/4GxpHYt"Logo Title Text 1")
