@@ -46,12 +46,13 @@ function initialize() {
 
 function handleClick(evt) {
     const index = parseInt(evt.target.id);
-    let column = index % 7 //column number 
+    let column = index % 7
 
-    if (winner || board[column]) return; //if top of column has a value or game has a winner
+    if (winner || board[column]) return;
+    //if top of column has a value or game has a winner
     let playerChoice = column
-    while (board[playerChoice + 7] === null && playerChoice + 7 < 42) {
         //if the next space in the column is not empty and in the array go down to the next space
+    while (board[playerChoice + 7] === null && playerChoice + 7 < 42) {
         playerChoice += 7
     };
     board[playerChoice] = player;

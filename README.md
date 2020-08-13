@@ -1,4 +1,4 @@
-# Connect4
+# Connect 4
 
 ## Screen shot of main game page.
 <img src="https://i.imgur.com/4iJ9LlF.png"/>
