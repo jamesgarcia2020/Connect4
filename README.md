@@ -2,6 +2,10 @@
 
 game: <img src"https://imgur.com/4GxpHYt"/>
 
+Inline-style: 
+![alt text]("https://imgur.com/4GxpHYt"Logo Title Text 1")
+
+
 
 This is a two player game.  Each player take a turn dropping a chip in a slot, player 1 goes first then player two moves.  The goal is to get 4 of your chips in a row before you oppoent does.  
 
