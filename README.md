@@ -1,6 +1,6 @@
 # Connect4
 
-<img src="https://imgur.com/4GxpHYt"/>
+game: https://imgur.com/4GxpHYt
 
 
 This is a two player game.  Each player take a turn dropping a chip in a slot, player 1 goes first then player two moves.  The goal is to get 4 of your chips in a row before you oppoent does.  
