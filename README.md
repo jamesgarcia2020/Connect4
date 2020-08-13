@@ -1,5 +1,7 @@
 # Connect4
 
+<img src="https://imgur.com/a/AQvvXtX"/>
+
 This is a two player game.  Each player take a turn dropping a chip in a slot, player 1 goes first then player two moves.  The goal is to get 4 of your chips in a row before you oppoent does.  
 
 The technologies used are HTML, CSS, Javascript.
